@@ -2,17 +2,8 @@
 <div>
 <p>The objective of this project is to convert any given travis build to buildbot build, travis will be parsed and
 converted to a config file understood by buildbot.</p>
-<article>
+<pre>
 Below is the sample .travis.yml file
-# .travis.yml - Travis CI service confiuration for GEOS
-#
-#
-# This is free software; you can redistribute and/or modify it under
-# the terms of the GNU Lesser General Public Licence as published
-# by the Free Software Foundation.
-# See the COPYING file for more information.
-#
-
 os:
     - linux
 
@@ -51,5 +42,5 @@ notifications:
         on_success: change
         on_failure: always
 
-</article>
+</pre>
 </div>
