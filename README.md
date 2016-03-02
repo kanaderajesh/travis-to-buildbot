@@ -23,13 +23,8 @@ matrix:
 addons:
   apt:
     packages:
-    - gcc-multilib
-    - g++-multilib
     - cmake
-    - make
-    - make test
-
-script:
+  script:
     - cd build
     - rm -Rf *
     - cmake ..
@@ -43,4 +38,15 @@ notifications:
         on_failure: always
 
 </pre>
+<p> from the above script, this project will generate script similar to the one mentioned below.</p>
+<pre>
+  from buildbot.plugins import util, steps
+  f = util.BuildFactory()
+  f.addStep(steps.ShellCommand(command=["apt-get", "install","cmake"]))
+  f.addStep(steps.ShellCommand(command=["cd", "build"]))
+  f.addStep(steps.ShellCommand(command=["rm", "-Rf", "*"]))
+  f.addStep(steps.ShellCommand(command=["cmake", ".."]))
+  f.addStep(steps.ShellCommand(command=["make"]))
+</pre>
+
 </div>
