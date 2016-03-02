@@ -48,5 +48,5 @@ notifications:
   f.addStep(steps.ShellCommand(command=["cmake", ".."]))
   f.addStep(steps.ShellCommand(command=["make"]))
 </pre>
-<h1>This project is not yet started, its now in desiging phase. Anybody wants to contribute to this project are welcome</p>
+<h1>This project is not yet started, its now in desiging phase</h1>
 </div>
